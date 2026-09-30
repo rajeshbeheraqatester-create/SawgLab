@@ -20,6 +20,7 @@ public class Action extends Base  {
 
     	LogInPage LIP= new LogInPage (driver);
         LIP.loginPage(getUsername(),getPassword());
+        System.out.println("sucessfully login ");
     	LIP.verifyLoginAction();
     	HomePage HP= new HomePage(driver);
     	HP.HomePageProducts();
