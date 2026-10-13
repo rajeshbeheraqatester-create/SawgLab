@@ -18,6 +18,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import com.beust.jcommander.Parameters;
+
+
 public class Base {
 
     protected WebDriver driver;
@@ -36,7 +39,7 @@ public class Base {
         System.out.println("Properties file loaded");
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun=true)
     public void openBrowser() {
 
         ChromeOptions options = new ChromeOptions();
@@ -65,7 +68,7 @@ public class Base {
         System.out.println("Browser opened");
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun=true)
     public void closeBrowser() {
 
         if (driver != null) {

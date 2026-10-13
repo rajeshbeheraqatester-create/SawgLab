@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class CheckOutPage {
@@ -31,7 +32,7 @@ public class CheckOutPage {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
 	}
-
+	
 	public void checkOutPage(HashMap<String, String> data) throws InterruptedException, IOException {
 		wait.until(ExpectedConditions.elementToBeClickable(FNameField)).sendKeys(data.get("FirstName"));
 		wait.until(ExpectedConditions.elementToBeClickable(LNameField)).sendKeys(data.get("LastName"));

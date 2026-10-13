@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class CartPage {
@@ -29,6 +30,7 @@ public class CartPage {
         s=new SoftAssert();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
+    @Test(groups= {"Regression"})
 	  public void openAddCart() throws InterruptedException
 	    {
 	     driver.findElement(By.id("shopping_cart_container")).click();	

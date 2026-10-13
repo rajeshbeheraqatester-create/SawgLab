@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class LogInPage {
@@ -25,7 +26,7 @@ public class LogInPage {
     private By passwordField = By.id("password");
             By loginButton = By.id("login-button");
             private By Actuallogo=By.cssSelector(".app_logo");      
-            // Login method
+            
             public void loginPage(String username, String password) {
 
                 wait.until(ExpectedConditions
@@ -43,6 +44,7 @@ public class LogInPage {
                
                 
             }
+            
             public void verifyLoginAction()
             {
             	String expectedLogo = "Swag Labs";
